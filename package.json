@@ -1,0 +1,59 @@
+{
+  "name": "rrweb-player",
+  "version": "2.1.1",
+  "dependencies": {
+    "@tsconfig/svelte": "^1.0.0",
+    "@rrweb/replay": "^2.1.1",
+    "@rrweb/packer": "^2.1.1"
+  },
+  "scripts": {
+    "dev": "vite build --watch",
+    "build": "vite build",
+    "test": "vitest run",
+    "start": "vite",
+    "check-types": "svelte-check --tsconfig ./tsconfig.json",
+    "lint": "yarn eslint src/**/*.ts"
+  },
+  "description": "rrweb's replayer UI",
+  "main": "./dist/rrweb-player.umd.cjs",
+  "module": "./dist/rrweb-player.js",
+  "unpkg": "./dist/rrweb-player.umd.cjs",
+  "jsdelivr": "./umd/rrweb-player.js",
+  "style": "./dist/style.css",
+  "typings": "dist/rrweb-player.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/rrweb-player.d.ts",
+        "default": "./dist/rrweb-player.js"
+      },
+      "require": {
+        "types": "./dist/rrweb-player.d.cts",
+        "default": "./dist/rrweb-player.cjs"
+      }
+    },
+    "./dist/style.css": "./dist/style.css"
+  },
+  "files": [
+    "umd",
+    "dist",
+    "package.json"
+  ],
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:exploitx3/livedemo-rrweb.git"
+  },
+  "keywords": [
+    "devtools",
+    "product-analytics",
+    "real-user-monitoring",
+    "rrweb"
+  ],
+  "author": "rrweb Core Team <maintainers@rrweb.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rrweb-io/rrweb/issues"
+  },
+  "homepage": "https://github.com/rrweb-io/rrweb#readme"
+}
