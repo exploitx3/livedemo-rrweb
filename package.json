@@ -1,0 +1,63 @@
+{
+  "name": "@rrweb/record",
+  "version": "2.1.1",
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "devtools",
+    "product-analytics",
+    "real-user-monitoring",
+    "rrweb",
+    "@rrweb/record"
+  ],
+  "scripts": {
+    "dev": "vite build --watch",
+    "build": "yarn turbo run prepublish",
+    "retest": "vitest run",
+    "test": "yarn build && vitest run",
+    "test:watch": "vitest watch",
+    "check-types": "tsc -noEmit",
+    "lint": "yarn eslint src/**/*.ts"
+  },
+  "homepage": "https://github.com/rrweb-io/rrweb/tree/main/packages/@rrweb/record#readme",
+  "bugs": {
+    "url": "https://github.com/rrweb-io/rrweb/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:exploitx3/livedemo-rrweb.git"
+  },
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/record.cjs",
+  "module": "./dist/record.js",
+  "unpkg": "./dist/record.umd.cjs",
+  "jsdelivr": "./umd/record.js",
+  "typings": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/record.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/record.cjs"
+      }
+    }
+  },
+  "files": [
+    "umd",
+    "dist",
+    "package.json"
+  ],
+  "dependencies": {
+    "@rrweb/types": "^2.1.1",
+    "rrweb": "^2.1.1",
+    "@rrweb/utils": "^2.1.1"
+  },
+  "browserslist": [
+    "supports es6-class"
+  ]
+}
